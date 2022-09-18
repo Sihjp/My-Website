@@ -251,7 +251,7 @@ button:active{
     /* text-align: center; */
     /* margin-bottom: 40px; */
 }
- 
+
 .services-text p:nth-child(2){
     font-family:calibri;
     color:#7e7d7d;
@@ -264,6 +264,8 @@ button:active{
     padding: 30px 40px 30px 40px;
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 .services-text{
     /* margin:50px 0px; */
@@ -289,13 +291,11 @@ button:active{
     display: flex;
     flex-direction: column;
     margin: 0px 4px;
-         
+    position: relative;
 }
-  
 .box-1{
     background-image:url("icon/animatew.gif");
-}
- 
+} 
 .box-2{
     background-image:url("icon/rikka.gif");
 }
@@ -303,7 +303,12 @@ button:active{
 .box-3{
     background-image: url("icon/radical.gif");
 }
- 
+.dark-tr{
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    background: rgba(0,0,0, .5);
+}
 .box-1 span,
 .box-2 span,
 .box-3 span{
@@ -316,25 +321,31 @@ button:active{
     align-items:center;
     font-family: calibri;
     font-weight: bold;
+    position: relative;
+    z-index: 10;
 }
  
 .box-1 p:nth-child(2),
 .box-2 p:nth-child(2),
 .box-3 p:nth-child(2){
-    color:#1d1c1c;
+    color:white;
     font-family: calibri;
     font-size: 23px;
     line-height:100%;
+    position: relative;
+    z-index: 10;
 }
  
 .box-1 p:nth-child(3),
 .box-2 p:nth-child(3),
 .box-3 p:nth-child(3){
     font-family: calibri;
-    color:#8F8F8F;
+    color: rgb(227, 226, 226);
     text-align:center;
     width: 230px;
     margin:0px 0px 20px 0px;
+    position: relative;
+    z-index: 10;
 }
  
 .box-1 button,
@@ -346,6 +357,8 @@ button:active{
     border:none;
     outline: none;
     border-radius:5px;
+    position: relative;
+    z-index: 10;
 }
  
 .testimoni{
@@ -361,7 +374,7 @@ button:active{
     font-weight:bold;
     color:#1d1c1c;
     font-size:30px;
-    line-height:0px;
+    line-height:100%;
 }
  
 .testimoni-text{
@@ -504,4 +517,18 @@ footer{
 .social i{
     font-size:20px;
     color:#2B2B2B;
+}
+
+@media screen and (max-width: 800px){
+    .model{
+        display: none;
+    }
+    section{
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+    .text-container{
+        margin-left: 30px;
+    }
 }
